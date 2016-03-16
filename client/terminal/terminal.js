@@ -36,12 +36,13 @@ Meteor.startup(function () {
         for (var i = 0; i < content.length; i++) {
             if (content[i].text.length > 0) {
                 var steps = content[i].steps;
-                content[i].actual_text = content[i].actual_text + content[i].text.substring(0, steps).replace(/\s/g, '&nbsp;');
+                content[i].actual_text = content[i].actual_text + content[i].text.substring(0, steps);
                 content[i].text = content[i].text.substring(steps);
 
             }
         }
         Session.set('content', content);
+        $('html, body').animate({scrollTop: $(document).height()}, 10);
     }, 10)
 });
 
