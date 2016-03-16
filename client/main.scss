@@ -7,7 +7,7 @@ body {
   color: limegreen;
   font-size: 20px;
   position: relative;
-  height: 100vh;
+  min-height: 95vh;
   width: 99vw;
   font-family: "Lucida Console", Courier, monospace;
   padding-left: 1vw;
@@ -31,7 +31,7 @@ body {
     .terminal-line {
       align-self: flex-end;
       width: 100vw;
-      line-height: 80%;
+      line-height: 90%;
       margin-bottom: 11px;
     }
 
@@ -42,15 +42,15 @@ body {
     max-height: 4vh;
     overflow: hidden;
 
+    #cursor {
+      display: inline-block;
+    }
+
     #inputHolder {
       position: absolute;
       top: 0;
       z-index: -500;
       opacity: 0;
-    }
-
-    #cursor {
-      display: inline-block;
     }
   }
 }
