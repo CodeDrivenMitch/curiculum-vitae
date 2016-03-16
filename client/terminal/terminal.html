@@ -1,0 +1,24 @@
+<template name="terminal">
+
+    <div id="terminal">
+        <div id="result">
+            {{#each terminal_text}}
+                {{> line}}
+            {{/each}}
+        </div>
+        <div id="terminal-input">
+            > {{holdingInput}}
+            <div id="cursor" style="display: {{#if inputting }}inline-block{{ else}} none{{/if}};">_</div>
+
+            <input type="text" id="inputHolder"/>
+        </div>
+
+    </div>
+
+</template>
+
+<template name="line">
+    <div class="terminal-line">
+        {{{actual_text}}}
+    </div>
+</template>
